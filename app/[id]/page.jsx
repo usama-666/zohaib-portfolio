@@ -13,22 +13,22 @@ import Contact from "@/components/Footer/Contact";
 const techLogos = [
     {
         title: "",
-        img: p1Img,
+        img: "/p1.png",
         alt: "logo-1",
     },
     {
         title: "",
-        img: p2Img,
+        img: "/p2.png",
         alt: "logo-2",
     },
     {
         title: "",
-        img: p3Img,
+        img: "/p3.png",
         alt: "logo-3",
     },
     {
         title: "",
-        img: p4Img,
+        img: "/p4.png",
         alt: "logo-4",
     },
 ];
