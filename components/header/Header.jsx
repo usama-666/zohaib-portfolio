@@ -21,10 +21,10 @@ const Header = () => {
     // }, [names.length]);
 
     return (
-        <div className="bg-yellow-300 w-full h-[800px]">
+        <div className="bg-yellow-300 w-full h-[500px] md:h-[800px]">
             <div className="flex justify-center items-center h-full">
                 <div className="">
-                    <h1 className="text-[80px]">
+                    <h1 className="text-xl md:text-[80px] font-bold">
                         {/* eslint-disable-next-line */}
                         Hi there! I'm{" "}
                         <span className="fade-in">
