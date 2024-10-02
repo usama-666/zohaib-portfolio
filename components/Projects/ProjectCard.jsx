@@ -1,12 +1,13 @@
 "use client";
 import Button from "@/utils/Button";
+import Link from "next/link";
 import React from "react";
 
 const ProjectCard = ({ card }) => {
     return (
-        <div className="  w-full mx-auto  rounded-lg bg-custom-grad  bg-img-grad glass-border">
-            <div className="flex flex-col justify-between gap-20 w-full rounded-lg  p-5">
-                <div>
+        <div className=" h-[500px]  w-full mx-auto  rounded-lg bg-custom-grad  bg-img-grad glass-border">
+            <div className="flex flex-col justify-evenly  w-full h-full rounded-lg  p-5 ">
+                <div className="h-2/3">
                     <div className="grid grid-cols-3 gap-10">
                         <div className="col-span-1">image-1</div>
                         <div className="col-span-1">image-1</div>
@@ -18,10 +19,12 @@ const ProjectCard = ({ card }) => {
                         <p className="text-sm">{card.description}</p>
                     </div>
                 </div>
-                <div className="flex justify-end ">
-                    <button className="border-[3px] hover:bg-[#7EFFD980] hover:border-[3px] hover:border-[#7EFFD980] border-[#7EFFD980] px-10 py-2 rounded-md">
-                        Visit now
-                    </button>
+                <div className="flex  justify-end">
+                    <Link href={`/${card.id}`}>
+                        <button className="border-[3px] hover:bg-[#7EFFD980] hover:border-[3px] hover:border-[#7EFFD980] border-[#7EFFD980] px-10 py-2 rounded-md">
+                            Visit now
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -10,7 +10,7 @@ import "swiper/css";
 
 const Projects = () => {
     return (
-        <div className=" py-20">
+        <div className=" py-20" id="projects">
             <Wrapper classname={"w-[90%]"}>
                 {/* <div className=" space-y-2">
                     <h1 className="text-xl md:text-3xl font-bold">
@@ -22,7 +22,10 @@ const Projects = () => {
                     </p>
                 </div> */}
 
-                <div>
+                <div className="space-y-5">
+                    <h1 className=" text-xl font-bold md:text-3xl">
+                        My Projects
+                    </h1>
                     <CardSlider />
                 </div>
             </Wrapper>

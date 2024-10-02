@@ -1,12 +1,9 @@
+"use client";
 import Navbar from "@/components/Navbar/Navbar";
 import Wrapper from "@/components/wrapper/Wrapper";
 import Image from "next/image";
 import React from "react";
 
-import p1Img from "../../public/p1.png";
-import p2Img from "../../public/p2.png";
-import p3Img from "../../public/p3.png";
-import p4Img from "../../public/p4.png";
 import CardSlider from "@/components/common/CardSlider";
 import Contact from "@/components/Footer/Contact";
 
@@ -32,12 +29,60 @@ const techLogos = [
         alt: "logo-4",
     },
 ];
-const page = () => {
+const ProjectPage = ({ params: { projectId } }) => {
+    const projectDetails = [
+        {
+            title: "Clash of Titans",
+            description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel placerat nisi, a pharetra dolor. Nulla facilisi. Nullam non justo vel odio volutpat lobortis.",
+            id: "Project-1",
+        },
+        {
+            title: "Call of Duty Modern Warfare",
+            description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel placerat nisi, a pharetra dolor. Nulla facilisi. Nullam non justo vel odio volutpat lobortis.",
+            id: "Project-2",
+            images: [],
+        },
+        {
+            title: "Project IGI 1",
+            description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel placerat nisi, a pharetra dolor. Nulla facilisi. Nullam non justo vel odio volutpat lobortis.",
+            id: "Project-3",
+            images: [],
+        },
+
+        {
+            title: "Counter Strike 2",
+            description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel placerat nisi, a pharetra dolor. Nulla facilisi. Nullam non justo vel odio volutpat lobortis.",
+            id: "Project-4",
+            images: [],
+        },
+
+        {
+            title: "Candy Crash  ",
+            description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel placerat nisi, a pharetra dolor. Nulla facilisi. Nullam non justo vel odio volutpat lobortis.",
+            id: "Project-5",
+            images: [],
+        },
+
+        // Add more projects here...
+    ];
+
+    const projectItem = projectDetails.filter(
+        (projId) => projId.id === projectId
+    );
+    const { title, id, description, images } =
+        projectItem.length > 0 && projectItem[0];
+    console.log(title, id, description, images);
+
     return (
         <div>
             <Navbar />
-            <div className="bg-yellow-300 h-screen w-full">
-                <div className="flex justify-center items-center h-[90%] w-[90%] mx-auto">
+            <div className="flex justify-center items-center  bg-img-grad bg-custom-grad h-[300px] md:h-screen w-full">
+                <div className=" h-[60%] md:h-[80%] w-[90%] mx-auto">
                     <iframe
                         className="w-full h-full"
                         src="https://www.youtube.com/embed/0kQ8i2FpRDk?autoplay=1&mute=1&controls=1/rel=0"
@@ -45,7 +90,6 @@ const page = () => {
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen
                     ></iframe>
                 </div>
             </div>
@@ -53,9 +97,14 @@ const page = () => {
             <div className="py-10">
                 <Wrapper classname={"w-[90%] "}>
                     <div>
-                        <h1 className="text-3xl font-bold">About Project</h1>
+                        {/* <h1 className="text-xl md:text-3xl font-bold">
+                            About Project
+                        </h1> */}
+                        <h2 className=" text-xl md:text-3xl font-bold">
+                            Project : {title}
+                        </h2>
 
-                        <p className="w-3/4">
+                        <p className="w-full md:w-3/4">
                             Lorem, ipsum dolor sit amet consectetur adipisicing
                             elit. Dicta veritatis commodi quasi, voluptates nam
                             delectus sit voluptatibus doloribus aperiam.
@@ -105,10 +154,10 @@ const page = () => {
                         </p>
                     </div>
 
-                    <div className="  my-5 flex gap-5">
+                    <div className="  my-5 flex flex-wrap gap-5">
                         {techLogos.map((tech, index) => (
                             <div
-                                className="h-32 w-32 border border-secondary  rounded-lg flex justify-center items-center bg-custom-grad bg-img-grad"
+                                className="h-20 w-20 md:h-32 md:w-32 border border-secondary  rounded-lg flex justify-center items-center bg-custom-grad bg-img-grad"
                                 key={index}
                             >
                                 <Image
@@ -117,7 +166,6 @@ const page = () => {
                                     width={100}
                                     height={100}
                                 />
-                                <p>{tech.title}</p>
                             </div>
                         ))}
                     </div>
@@ -125,11 +173,39 @@ const page = () => {
                     <div className="h-1 rounded-2xl my-20 bg-secondary"></div>
 
                     {/* imaegs  */}
-                    <div className="flex gap-10">
-                        <div className="h-[450px] w-[500px]  bg-custom-grad bg-img-grad"></div>
-                        <div className="h-[450px] w-[500px]  bg-custom-grad bg-img-grad"></div>
-                        <div className="h-[450px] w-[500px]  bg-custom-grad bg-img-grad"></div>
-                        <div className="h-[450px] w-[500px]  bg-custom-grad bg-img-grad"></div>
+                    <div className=" flex  flex-col md:flex-row justify-between gap-5  ">
+                        <div className="relative h-[450px] w-full  md:w-1/5   bg-custom-grad bg-img-grad">
+                            <Image
+                                src={"/poster.jpg"}
+                                alt="posters "
+                                fill
+                                className="object-cover"
+                            />
+                        </div>
+                        <div className="relative h-[450px] w-full  md:w-1/5   bg-custom-grad bg-img-grad">
+                            <Image
+                                src={"/poster.jpg"}
+                                alt="posters "
+                                fill
+                                className="object-cover"
+                            />
+                        </div>
+                        <div className="relative h-[450px] w-full  md:w-1/5   bg-custom-grad bg-img-grad">
+                            <Image
+                                src={"/poster.jpg"}
+                                alt="posters "
+                                fill
+                                className="object-cover"
+                            />
+                        </div>
+                        <div className="relative h-[450px] w-full  md:w-1/5   bg-custom-grad bg-img-grad">
+                            <Image
+                                src={"/poster.jpg"}
+                                alt="posters "
+                                fill
+                                className="object-cover"
+                            />
+                        </div>
                     </div>
 
                     <div className="my-20">
@@ -142,4 +218,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default ProjectPage;

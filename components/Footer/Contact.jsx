@@ -44,7 +44,7 @@ const Contact = () => {
                     </div>
                 </Link>
             </div>
-            <div>
+            <div className="w-[80%] text-center">
                 <h2>@copyright Zohaib Butt Game Dev PVT SINCE 2000</h2>
             </div>
         </footer>

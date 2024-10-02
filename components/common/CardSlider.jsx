@@ -12,43 +12,40 @@ export default function CardSlider() {
 
     const projectDetails = [
         {
-            title: "Project 1",
+            title: "Clash of Titans",
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel placerat nisi, a pharetra dolor. Nulla facilisi. Nullam non justo vel odio volutpat lobortis.",
-            link: "https://example.com",
+            id: "Project-1",
         },
         {
-            title: "Project 2",
+            title: "Call of Duty Modern Warfare",
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel placerat nisi, a pharetra dolor. Nulla facilisi. Nullam non justo vel odio volutpat lobortis.",
-            link: "https://example.com",
+            id: "Project-2",
+            images: [],
         },
         {
-            title: "Project 3",
+            title: "Project IGI 1",
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel placerat nisi, a pharetra dolor. Nulla facilisi. Nullam non justo vel odio volutpat lobortis.",
-            link: "https://example.com",
-        },
-
-        {
-            title: "Project 4",
-            description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel placerat nisi, a pharetra dolor. Nulla facilisi. Nullam non justo vel odio volutpat lobortis.",
-            link: "https://example.com",
+            id: "Project-3",
+            images: [],
         },
 
         {
-            title: "Project 5",
+            title: "Counter Strike 2",
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel placerat nisi, a pharetra dolor. Nulla facilisi. Nullam non justo vel odio volutpat lobortis.",
-            link: "https://example.com",
+            id: "Project-4",
+            images: [],
         },
 
         {
-            title: "Project 6",
+            title: "Candy Crash  ",
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel placerat nisi, a pharetra dolor. Nulla facilisi. Nullam non justo vel odio volutpat lobortis.",
-            link: "https://example.com",
+            id: "Project-5",
+            images: [],
         },
 
         // Add more projects here...
@@ -60,13 +57,19 @@ export default function CardSlider() {
 
     return (
         <Swiper
-            slidesPerView={2} // Display multiple slides
+            slidesPerView={1} // Display multiple slides
             spaceBetween={20} // Space between slides
             loop={true} // Infinite loop
             breakpoints={{
                 // When window width is >= 768px (md screens)
+                480: {
+                    slidesPerView: 2,
+                },
                 768: {
                     slidesPerView: 3, // Show 3 slides on medium and larger screens
+                },
+                1200: {
+                    slidesPerView: 4, // Show 4 slides on larger screens
                 },
             }}
             // freeMode={true} // Enable free mode for drag/swipe
