@@ -4,7 +4,6 @@ import Wrapper from "../wrapper/Wrapper";
 import ProjectCard from "./ProjectCard";
 import CardSlider from "../common/CardSlider";
 
-import { Swiper, SwiperSlide } from "swiper/react";
 // import { Autoplay, FreeMode } from "swiper/modules";
 import "swiper/css";
 
@@ -26,6 +25,7 @@ const Projects = () => {
                     <h1 className=" text-xl font-bold md:text-3xl">
                         My Projects
                     </h1>
+
                     <CardSlider />
                 </div>
             </Wrapper>

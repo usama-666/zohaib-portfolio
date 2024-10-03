@@ -1,18 +1,52 @@
 "use client";
 import Button from "@/utils/Button";
 import Link from "next/link";
-import React from "react";
-
+import React, { useState } from "react";
+import Image from "next/image";
 const ProjectCard = ({ card }) => {
+    // Fallback state for static image (later to be replaced by database URL)
+    const [imgSrc, setImgSrc] = useState("/mini.jpg");
     return (
-        <div className=" h-[500px]  w-full mx-auto  rounded-lg bg-custom-grad  bg-img-grad glass-border">
-            <div className="flex flex-col justify-evenly  w-full h-full rounded-lg  p-5 ">
-                <div className="h-2/3">
-                    <div className="grid grid-cols-3 gap-10">
-                        <div className="col-span-1">image-1</div>
-                        <div className="col-span-1">image-1</div>
-                        <div className="col-span-1">image-1</div>
-                        <div className="col-span-3">Video Here</div>
+        <div className="   w-full mx-auto  rounded-lg bg-custom-grad  bg-img-grad glass-border">
+            <div className="flex flex-col   w-full h-full rounded-lg   py-3">
+                <div className="p-3">
+                    <div className="grid grid-cols-3 bg-blue-300 gap-3">
+                        <div className="bg-red-200 col-span-1">
+                            <Image
+                                src={imgSrc}
+                                className="w-auto h-auto"
+                                alt="mini"
+                                width={500}
+                                height={1000}
+                            />
+                        </div>
+                        <div className="bg-red-200 col-span-1">
+                            <Image
+                                src={imgSrc}
+                                className="w-auto h-auto"
+                                alt="mini"
+                                width={500}
+                                height={500}
+                            />
+                        </div>
+                        <div className="bg-red-200 col-span-1">
+                            <Image
+                                src={imgSrc}
+                                className="w-auto h-auto"
+                                alt="mini"
+                                width={500}
+                                height={500}
+                            />
+                        </div>
+                        <div className="col-span-3 bg-red-200">
+                            <Image
+                                src={imgSrc}
+                                className="object-cover"
+                                alt="mini"
+                                width={1000}
+                                height={100}
+                            />
+                        </div>
                     </div>
                     <div className="mt-4 flex flex-col gap-4">
                         <h2 className=" text-lg md:text-xl">{card.title}</h2>
