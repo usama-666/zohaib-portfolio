@@ -4,6 +4,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./globals.css";
 import Head from "next/head";
+import Navbar from "@/components/Navbar/Navbar";
+import ScrollTop from "@/components/ScrollTop";
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
@@ -38,7 +40,14 @@ export default function RootLayout({ children }) {
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
-                {children}
+                <div className="text-primary font-sans bg-bgcolor relative">
+                    <Navbar />
+
+                    {children}
+                    <div className="h-16 w-16 md:w-20 md:h-20 flex justify-center items-center   absolute bottom-10 right-6">
+                        <ScrollTop className=" " />
+                    </div>
+                </div>
             </body>
         </html>
     );

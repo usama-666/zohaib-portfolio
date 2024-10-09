@@ -43,14 +43,15 @@ const Navbar = () => {
                                 <Link href={"/"}> Home</Link>
                             </li>
                             <li className="text-white px-3 py-2 mx-3">
-                                <Link href={"#projects"}> Projects</Link>
+                                {/* <Link> */} <a href="#projects"> Projects</a>
+                                {/* </Link> */}
                             </li>
 
                             <li className="text-white px-3 py-2 mx-3">
-                                <Link href={"/"}> About me</Link>
+                                <a href="#about-me"> About me</a>
                             </li>
                             <li className="text-white px-3 py-2 mx-3">
-                                <Link href={"/"}> Get In Touch</Link>
+                                <a href={"#get-in-touch"}> Get In Touch</a>
                             </li>
                         </ul>
                     </div>

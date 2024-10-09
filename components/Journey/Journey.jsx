@@ -23,7 +23,7 @@ const Journey = () => {
     ];
 
     return (
-        <div className="">
+        <div className="" id="about-me">
             <h1 className="h1 text-xl font-bold md:text-3xl text-center my-10">
                 My Professional Journey
             </h1>

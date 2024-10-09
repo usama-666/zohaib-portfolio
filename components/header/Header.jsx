@@ -1,7 +1,9 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
 
 const Header = () => {
+    // console.log(view);
     const names = [
         "Muhammad Zohaib",
         "Game Developer",
@@ -31,6 +33,8 @@ const Header = () => {
                             {names[currentNameIndex]}
                         </span>
                     </h1>
+
+                    <button>Click me </button>
                 </div>
             </div>
             {/* Add the fade-in animation using Tailwind CSS */}

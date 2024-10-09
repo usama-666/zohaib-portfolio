@@ -1,5 +1,4 @@
 "use client";
-import Navbar from "@/components/Navbar/Navbar";
 import Wrapper from "@/components/wrapper/Wrapper";
 import Image from "next/image";
 import React from "react";
@@ -80,9 +79,8 @@ const ProjectPage = ({ params: { projectId } }) => {
 
     return (
         <div>
-            <Navbar />
             <div className="flex justify-center items-center  bg-img-grad bg-custom-grad h-[300px] md:h-screen w-full">
-                <div className=" h-[60%] md:h-[80%] w-[90%] mx-auto">
+                <div className=" h-[90%] md:h-[80%] w-[95%] mx-auto">
                     <iframe
                         className="w-full h-full"
                         src="https://www.youtube.com/embed/0kQ8i2FpRDk?autoplay=1&mute=1&controls=1/rel=0"
