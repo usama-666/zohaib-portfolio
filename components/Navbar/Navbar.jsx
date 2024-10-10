@@ -11,14 +11,6 @@ const Navbar = () => {
         setShowMenu(!showMenu);
     };
 
-    // Function to scroll to section smoothly
-    const scrollToSection = (id) => {
-        const section = document.getElementById(id);
-        if (section) {
-            section.scrollIntoView({ behavior: "smooth" });
-        }
-    };
-
     return (
         <div className="spare-home">
             <Wrapper classname={"w-[90%]"}>
@@ -61,25 +53,34 @@ const Navbar = () => {
                     <div className="absolute t0p-[78px] right-0 md:hidden  w-full  bg-bgcolor flex justify-end   z-50 py-5">
                         <ul className="w-full  flex flex-col gap-4 justify-center items-center h-full text-white">
                             <li className="w-full text-center py-4 hover:border hover:border-main rounded-md">
-                                <Link href={"/"}> Home</Link>
+                                <a href={"/"} onClick={handleShowMenu}>
+                                    {" "}
+                                    Home
+                                </a>
                             </li>
                             <li className="w-full text-center py-4 hover:border hover:border-main rounded-md">
-                                <Link
-                                    href={"#projects"}
-                                    onClick={handleShowMenu}
-                                >
+                                <a hhref="#projects" onClick={handleShowMenu}>
                                     {" "}
                                     Projects
-                                </Link>
+                                </a>
                                 {/* <button onClick={scrollToSection}>
                                     Projects
                                 </button> */}
                             </li>
                             <li className="w-full text-center py-4 hover:border hover:border-main rounded-md">
-                                <Link href={"/"}> About me</Link>
+                                <a href="#about-me" onClick={handleShowMenu}>
+                                    {" "}
+                                    About me
+                                </a>
                             </li>
                             <li className="w-full text-center py-4 hover:border hover:border-main rounded-md">
-                                <Link href={"/"}> Get In Touch</Link>
+                                <a
+                                    href={"#get-in-touch"}
+                                    onClick={handleShowMenu}
+                                >
+                                    {" "}
+                                    Get In Touch
+                                </a>
                             </li>
                         </ul>
                     </div>

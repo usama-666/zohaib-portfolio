@@ -44,7 +44,7 @@ export default function RootLayout({ children }) {
                     <Navbar />
 
                     {children}
-                    <div className="h-16 w-16 md:w-20 md:h-20 flex justify-center items-center   absolute bottom-10 right-6">
+                    <div className="h-16 w-16 md:w-20 md:h-20 flex justify-center items-center z-10  fixed bottom-10 right-6">
                         <ScrollTop className=" " />
                     </div>
                 </div>

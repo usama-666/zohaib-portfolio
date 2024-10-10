@@ -25,7 +25,7 @@ const Header = () => {
     return (
         <div className="bg-custom-grad bg-img-grad w-full h-[500px] md:h-[800px]">
             <div className="flex justify-center items-center h-full">
-                <div className="">
+                <div className=" w-[80%] ">
                     <h1 className="w-2/3 md:w-full text-xl md:text-[80px] font-bold">
                         {/* eslint-disable-next-line */}
                         Hi there! I'm{" "}
@@ -34,7 +34,7 @@ const Header = () => {
                         </span>
                     </h1>
 
-                    <button>Click me </button>
+                    {/* <button>Click me </button> */}
                 </div>
             </div>
             {/* Add the fade-in animation using Tailwind CSS */}
