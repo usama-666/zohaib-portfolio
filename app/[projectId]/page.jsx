@@ -39,7 +39,6 @@ const techLogos = [
 const ProjectPage = ({ params: { projectId } }) => {
     const [project, setProject] = useState(null); // Initialize project state
 
-    console.log(projectId);
     useEffect(() => {
         // Function to get a single document from the Firestore collection by its ID
         const fetchProject = async () => {

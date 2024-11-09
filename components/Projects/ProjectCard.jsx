@@ -7,7 +7,6 @@ const ProjectCard = ({ card }) => {
     // Fallback state for static image (later to be replaced by database URL)
     // const [imgSrc, setImgSrc] = useState("/mini.jpg");
 
-
     const truncateDesc =
         (card?.description && card.description.slice(0, 250)) ||
         card.description;
@@ -20,8 +19,8 @@ const ProjectCard = ({ card }) => {
             <div className="flex flex-col justify-between   w-full h-full rounded-lg   py-3">
                 <div className="p-2">
                     <div className="grid grid-cols-3   gap-2">
-                        {images.map((image) => (
-                            <div className="bg-red-200  h-[100px] col-span-1">
+                        {images.map((image, index) => (
+                            <div className="  h-[100px] col-span-1" key={index}>
                                 <Image
                                     src={image}
                                     className="object-cover w-full h-full"
