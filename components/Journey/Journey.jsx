@@ -4,21 +4,21 @@ const Journey = () => {
     const experience = [
         {
             index: 0,
-            name: "experience",
-            year: "2015",
-            desc: "  Lorem ipsum dolor sit am rem, consectetur adipiscing    ",
+            name: "Freelance",
+            year: "2022",
+            desc: "Worked with Upwork and direct clients on UI/UX and level design.",
         },
         {
             index: 1,
-            name: "experienc e",
-            year: "2015",
-            desc: "  Lorem ipsum dolor sit am rem, consectetur adipiscing    ",
+            name: "PUGSDE Solutions",
+            year: "2023",
+            desc: "Intern Game Developer focused on code optimization, 3D character controls.",
         },
         {
             index: 2,
-            name: "experience",
-            year: "2015",
-            desc: "  Lorem ipsum dolor sit am rem, consectetur adipiscing    ",
+            name: "PUGSDE Solutions",
+            year: "2024",
+            desc: "Junior Game Developer specializing in C#, Unity NavMesh, and DoTween animation.",
         },
     ];
 

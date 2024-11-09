@@ -1,57 +1,28 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
+import HeaderAnimation from "../HeaderAnimation";
 
 const Header = () => {
-    // console.log(view);
-    const names = [
-        "Muhammad Zohaib",
-        "Game Developer",
-        "UI/UX Designer",
-        "3D Designer",
-    ];
-
-    const [currentNameIndex, setCurrentNameIndex] = useState(0);
-
-    // Cycle through names with a delay
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         setCurrentNameIndex((prevIndex) => (prevIndex + 1) % names.length);
-    //     }, 2000); // Change name every 2 seconds
-
-    //     return () => clearInterval(interval); // Cleanup on component unmount
-    // }, [names.length]);
-
     return (
-        <div className="bg-custom-grad bg-img-grad w-full h-[500px] md:h-[800px]">
-            <div className="flex justify-center items-center h-full">
-                <div className=" w-[80%] ">
-                    <h1 className="w-2/3 md:w-full text-xl md:text-[80px] font-bold">
-                        {/* eslint-disable-next-line */}
-                        Hi there! I'm{" "}
-                        <span className="fade-in">
-                            {names[currentNameIndex]}
-                        </span>
-                    </h1>
-
-                    {/* <button>Click me </button> */}
-                </div>
+        <div className="relative bg-custom-grad bg-img-grad w-full h-[500px] md:h-[620px]   ">
+            <div className="">
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    className="absolute top-0 left-0 w-full h-full object-cover "
+                >
+                    <source
+                        src={"./bg-demo.mp4"} // Replace this with your video URL
+                        type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                </video>
             </div>
-            {/* Add the fade-in animation using Tailwind CSS */}
-            <style jsx>{`
-                .fade-in {
-                    opacity: 0;
-                    animation: fadeIn 1s forwards;
-                }
-                @keyframes fadeIn {
-                    0% {
-                        opacity: 0;
-                    }
-                    100% {
-                        opacity: 1;
-                    }
-                }
-            `}</style>
+            <div className="relative z-10 flex justify-center items-center h-full bg-black bg-opacity-75">
+                <HeaderAnimation />
+            </div>
         </div>
     );
 };
