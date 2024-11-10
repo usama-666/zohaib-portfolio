@@ -21,8 +21,8 @@ const Projects = () => {
                     </p>
                 </div> */}
 
-                <div className="space-y-5">
-                    <h1 className=" text-xl font-bold md:text-3xl">
+                <div className="space-y-5 ">
+                    <h1 className=" text-xl text-center font-bold md:text-3xl pb-10">
                         My Projects
                     </h1>
 

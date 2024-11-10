@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Wrapper from "../wrapper/Wrapper";
 import { MenuIcon, X } from "lucide-react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const Navbar = () => {
     const [isClient, setIsClient] = useState(false);
@@ -27,12 +28,24 @@ const Navbar = () => {
         <div className="spare-home">
             <Wrapper classname={"w-[90%]"}>
                 <div className="relative w-full flex md:justify-between items-center">
-                    <div className="w-full md:w-1/4 flex justify-between py-5">
-                        <div>
-                            <Link href={"/"} className="text-xl px-4">
-                                Muhammad Zohaib
-                            </Link>
-                        </div>
+                    <div className="w-full md:w-1/4 flex justify-between items-center ">
+                        <Link href={"/"}>
+                            <div className="w-[80px] h-[80px] ">
+                                <Image
+                                    src={"/b_logo.png"}
+                                    alt="zohaib butt"
+                                    width={80}
+                                    height={800}
+                                    className="object-contain"
+                                />
+                            </div>
+                        </Link>
+                        {/* <Link
+                            href={"/"}
+                            className="text-[40px] px-4 font-logo font-bold"
+                        >
+                            Muhammad Zohaib
+                        </Link> */}
                         <div className="md:hidden">
                             {!showMenu ? (
                                 <MenuIcon size={36} onClick={handleShowMenu} />
@@ -44,8 +57,8 @@ const Navbar = () => {
 
                     {/* Desktop navigation */}
                     <div className="md:w-3/4 hidden md:flex md:justify-end nav-items">
-                        <ul className="flex justify-center text-lg">
-                            <li className="text-white px-3 py-2 mx-3">
+                        <ul className="flex justify-center md:text-xl lg:text-3xl font-serif ">
+                            <li className="text-white px-3 py-2 mx-3 font-serif ">
                                 <Link href="/">Home</Link>
                             </li>
                             <li className="text-white px-3 py-2 mx-3">

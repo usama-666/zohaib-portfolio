@@ -17,7 +17,7 @@ const Header = () => {
                         src={"./bg-demo.mp4"} // Replace this with your video URL
                         type="video/mp4"
                     />
-                    Your browser does not support the video tag.
+                    {/* Your browser does not support the video tag. */}
                 </video>
             </div>
             <div className="relative z-10 flex justify-center items-center h-full bg-black bg-opacity-75">

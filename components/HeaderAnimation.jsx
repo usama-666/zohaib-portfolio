@@ -1,3 +1,4 @@
+"use client";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import React, { useState, useEffect } from "react";
 
@@ -21,27 +22,40 @@ const HeaderAnimation = () => {
     }, [names.length]);
 
     return (
-        <div className="w-[80%]">
-            <div className="flex flex-col  md:flex-row">
-                <h1 className="text-3xl  sm:text-4xl md:text-[65px] font-bold tracking-tighter md:leading-[4rem] w ">
-                    Hi there! I'm{"   "}
-                </h1>
-                <div className="md:ml-5 flex  space-x-1 justify-start w-full md:w-2/3">
-                    <AnimatePresence mode="wait">
-                        {names[currentNameIndex].split("").map((char, i) => (
-                            <motion.p
-                                ref={ref}
-                                key={`${currentNameIndex}-${i}`} // Unique key for each character
-                                initial={{ opacity: 0, x: -18 }}
-                                animate={isInView ? { opacity: 1, x: 0 } : {}}
-                                exit={{ opacity: 0, x: 18 }} // Animate exit with fade and slide
-                                transition={{ duration: 0.5, delay: i * 0.1 }}
-                                className="text-3xl text-center  font-bold  sm:text-4xl md:text-[65px]  tracking-tighter md:leading-[4rem]"
-                            >
-                                {char === " " ? <span>&nbsp;</span> : char}
-                            </motion.p>
-                        ))}
-                    </AnimatePresence>
+        <div className="w-[80%] ">
+            <div className="flex flex-col items-center justify-center text-center  lg:flex-row py-5 w-full">
+                <div className="flex flex-col md:flex-col lg:flex-row justify-center items-center ">
+                    <h1 className="text-3xl sm:text-4xl md:text-[60px] font-serif font-bold md:leading-[4rem] text-center">
+                        Hi there! I'm{" "}
+                    </h1>
+                    <div className="lg:ml-5 flex items-center text-center space-x-1 font-serif ">
+                        <AnimatePresence mode="wait">
+                            {names[currentNameIndex]
+                                .split("")
+                                .map((char, i) => (
+                                    <motion.p
+                                        ref={ref}
+                                        key={`${currentNameIndex}-${i}`}
+                                        initial={{ opacity: 0, x: -18 }}
+                                        animate={
+                                            isInView ? { opacity: 1, x: 0 } : {}
+                                        }
+                                        exit={{ opacity: 0, x: 18 }}
+                                        transition={{
+                                            duration: 0.5,
+                                            delay: i * 0.1,
+                                        }}
+                                        className="text-3xl font-bold sm:text-4xl md:text-[65px] lg:text-[75px] tracking-tighter md:leading-[4rem] text-center"
+                                    >
+                                        {char === " " ? (
+                                            <span>&nbsp;</span>
+                                        ) : (
+                                            char
+                                        )}
+                                    </motion.p>
+                                ))}
+                        </AnimatePresence>
+                    </div>
                 </div>
             </div>
         </div>

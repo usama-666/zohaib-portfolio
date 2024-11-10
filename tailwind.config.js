@@ -16,6 +16,7 @@ module.exports = {
             fontFamily: {
                 sans: ["Inter", "sans-serif"], // Custom font family
                 serif: ["Merriweather", "serif"],
+                logo: ["Natyl", "sans-serif"], // Add custom font for logo
             },
             colors: {
                 main: "#fe32fd",

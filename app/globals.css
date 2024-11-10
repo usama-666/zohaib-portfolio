@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "Natyl";
+    src: url("/fonts/Natyl-Demo.ttf") format("truetype");
+    font-weight: bolder;
+    font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -34,4 +41,10 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+.text-gradient {
+    background: linear-gradient(0deg, #482d53 0%, #1c2b39 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

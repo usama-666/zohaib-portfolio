@@ -64,9 +64,9 @@ const ProjectPage = ({ params: { projectId } }) => {
     }, [projectId]);
     return (
         <div>
-            <div className="flex justify-center items-center  bg-img-grad bg-custom-grad h-[300px] md:h-screen w-full">
+            <div className="flex justify-center items-center  bg-img-grad bg-custom-grad h-[300px] md:h-screen  w-full">
                 {project?.videoUrl && (
-                    <div className=" h-[90%] md:h-[80%] w-[95%] mx-auto">
+                    <div className=" h-[90%] md:h-[80%] w-[95%] mx-auto ">
                         <iframe
                             className="w-full h-full"
                             // src={` https://www.youtube.com/embed/SRq6xzROJxs?autoplay=1&mute=1&controls=1/rel=0`}
