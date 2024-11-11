@@ -49,7 +49,7 @@ const Journey = () => {
                                     <h1 className="capitalze text-lg font-bold text-center">
                                         {exp.name}
                                     </h1>
-                                    <p className="text-sm text-center ">
+                                    <p className="text-md text-center ">
                                         {exp.desc}
                                     </p>
                                 </div>
@@ -60,7 +60,7 @@ const Journey = () => {
                                     <h1 className="capitalze text-lg font-bold text-center">
                                         {exp.name}
                                     </h1>
-                                    <p className="text-sm text-center">
+                                    <p className="text-md text-center">
                                         {exp.desc}
                                     </p>
                                 </div>
@@ -115,7 +115,7 @@ const Journey = () => {
                                 <h1 className="capitalze text-lg font-bold ">
                                     {experience[0].name}
                                 </h1>
-                                <p className="text-sm  w-3/4 ">
+                                <p className="text-md  w-3/4 ">
                                     {experience[0].desc}
                                 </p>
                             </div>
@@ -129,7 +129,7 @@ const Journey = () => {
                                 <h1 className="capitalze text-lg font-bold ">
                                     {experience[1].name}
                                 </h1>
-                                <p className="text-sm  w-3/4 ">
+                                <p className="text-md  w-3/4 ">
                                     {experience[1].desc}
                                 </p>
                             </div>
@@ -143,7 +143,7 @@ const Journey = () => {
                                 <h1 className="capitalze text-lg font-bold ">
                                     {experience[2].name}
                                 </h1>
-                                <p className="text-sm  w-3/4 ">
+                                <p className="text-md  w-3/4 ">
                                     {experience[2].desc}
                                 </p>
                             </div>

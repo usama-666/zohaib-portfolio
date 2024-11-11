@@ -88,7 +88,7 @@ const ProjectPage = ({ params: { projectId } }) => {
                             About Project
                         </h1> */}
                         <h2 className=" text-xl md:text-3xl font-bold">
-                            Project : {project?.name}
+                            {project?.name}
                         </h2>
 
                         <p className="w-full md:w-3/4  md:text-justify">

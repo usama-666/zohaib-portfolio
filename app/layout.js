@@ -36,6 +36,20 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <Head>
                 <title>Zohaib Butt | Portfolio</title>
+                {/* Use logo.png as the favicon */}
+                <link
+                    rel="icon"
+                    href="/b_logo.png"
+                    type="image/png"
+                    sizes="32x32"
+                />
+                <link
+                    rel="icon"
+                    href="/favicon.ico"
+                    type="image/png"
+                    sizes="16x16"
+                />
+                <link rel="apple-touch-icon" href="/b_logo.png" />
             </Head>
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}

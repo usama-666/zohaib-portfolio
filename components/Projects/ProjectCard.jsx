@@ -47,8 +47,12 @@ const ProjectCard = ({ card }) => {
                         </div>
                     </div>
                     <div className="mt-4 flex flex-col gap-1  px-3">
-                        <h2 className=" text-lg md:text-xl">{card.name}</h2>
-                        <p className="text-sm ">{truncateDesc}...</p>
+                        <h2 className=" text-xl md:text-2xl font-bold">
+                            {card.name}
+                        </h2>
+                        <p className="text-md md:text-lg tracking-normal ">
+                            {truncateDesc}...
+                        </p>
                     </div>
                 </div>
                 <div className="flex  justify-end mx-3    ">
