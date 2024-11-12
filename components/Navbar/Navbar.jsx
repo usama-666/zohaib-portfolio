@@ -103,7 +103,7 @@ const Navbar = () => {
                     <div className="absolute top-[78px] right-0 md:hidden w-full bg-bgcolor flex justify-end z-50 py-5">
                         <ul className="w-full flex flex-col gap-4 justify-center items-center h-full text-white">
                             <Link
-                                className="w-full"
+                                className="w-full hover:bg-gray-50 hover:text-black  "
                                 href="/"
                                 onClick={handleShowMenu}
                             >
@@ -112,7 +112,7 @@ const Navbar = () => {
                                 </li>
                             </Link>
                             <Link
-                                className="w-full"
+                                className="w-full hover:bg-gray-50 hover:text-black "
                                 href={
                                     router.pathname === "/"
                                         ? `#projects`
@@ -125,7 +125,7 @@ const Navbar = () => {
                                 </li>
                             </Link>
                             <Link
-                                className="w-full"
+                                className="w-full hover:bg-gray-50 hover:text-black "
                                 href={
                                     router.pathname === "/"
                                         ? `#about-me`
@@ -138,7 +138,7 @@ const Navbar = () => {
                                 </li>
                             </Link>
                             <Link
-                                className="w-full"
+                                className="w-full hover:bg-gray-50 hover:text-black "
                                 href={
                                     router.pathname === "/"
                                         ? `#get-in-touch`

@@ -29,28 +29,28 @@ export const metadata = {
             "en-GB": "/en-GB",
         },
     },
+    icons: {
+        icon: [
+            {
+                rel: "icon",
+                url: "/b_logo.png",
+                type: "image/png",
+                sizes: "32x32",
+            },
+            {
+                rel: "icon",
+                url: "/favicon.ico",
+                type: "image/x-icon",
+                sizes: "16x16",
+            },
+        ],
+        apple: { rel: "apple-touch-icon", url: "/b_logo.png" },
+    },
 };
 
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <Head>
-                <title>Zohaib Butt | Portfolio</title>
-                {/* Use logo.png as the favicon */}
-                <link
-                    rel="icon"
-                    href="/b_logo.png"
-                    type="image/png"
-                    sizes="32x32"
-                />
-                <link
-                    rel="icon"
-                    href="/favicon.ico"
-                    type="image/png"
-                    sizes="16x16"
-                />
-                <link rel="apple-touch-icon" href="/b_logo.png" />
-            </Head>
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >

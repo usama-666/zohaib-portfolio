@@ -17,7 +17,7 @@ const ProjectCard = ({ card }) => {
     return (
         <div className="   w-full mx-auto   h-full  rounded-lg bg-custom-grad  bg-img-grad glass-border">
             {/* <div className="flex flex-col justify-between border-2 bg-blue-300  w-full h-full rounded-lg   "> */}
-            <div className="p-2   flex justify-between flex-col min-h-[550px] h-full">
+            <div className="p-2   flex justify-between flex-col min-h-[550px] sm:min-h-[630px] md:min-h-[600px] h-full">
                 <div className=" flex-grow flex flex-col">
                     <div className="grid grid-cols-3   gap-2 ">
                         {images.map((image, index) => (
@@ -47,15 +47,15 @@ const ProjectCard = ({ card }) => {
                         </div>
                     </div>
                     <div className="mt-4 flex flex-col gap-1  px-3">
-                        <h2 className=" text-xl md:text-2xl font-bold">
+                        <h2 className=" text-lg md:text-xl font-bold">
                             {card.name}
                         </h2>
-                        <p className="text-md md:text-lg tracking-normal ">
+                        <p className="text-sm md:text-md tracking-normal ">
                             {truncateDesc}...
                         </p>
                     </div>
                 </div>
-                <div className="flex  justify-end mx-3    ">
+                <div className="flex  justify-end mx-3  mt-5   ">
                     <Link href={`/${card.id}`}>
                         <button className="border-[3px] hover:bg-[#7EFFD980] hover:border-[3px] hover:border-[#7EFFD980] border-[#7EFFD980] px-10 py-2 rounded-md">
                             Visit now

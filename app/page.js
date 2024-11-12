@@ -7,7 +7,7 @@ import ScrollTop from "@/components/ScrollTop";
 
 export default function Home() {
     return (
-        <main className="font-serif">
+        <main className="">
             <Header />
             <Projects />
             <Journey />

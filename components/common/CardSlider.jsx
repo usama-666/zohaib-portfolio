@@ -100,7 +100,7 @@ const CardSlider = () => {
                 // className="mySwiper "
             >
                 {project.map((card, index) => (
-                    <SwiperSlide key={index}>
+                    <SwiperSlide key={index} className="h-full">
                         <ProjectCard
                             card={card}
                             onClick={() => handleNavigate(index)}
